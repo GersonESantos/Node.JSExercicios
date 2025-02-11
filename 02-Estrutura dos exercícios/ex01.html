@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 01</title>
+    <script>
+        function acao() {
+            var nota1 = parseFloat(document.querySelector('input[name="nota1"]').value);
+            var nota2 = parseFloat(document.querySelector('input[name="nota2"]').value);
+            var media = (nota1 + nota2) / 2;
+            
+        
+       
+
+        var situacao = media >= 7 ? 'Aprovado' : 'Reprovado';
+
+         // Mensagem
+         document.getElementById("mensagem").innerHTML = situacao+" com média "+media
+    }
+    </script>
+</head>
+<body>
+    <form action="">
+        <input type="text" placeholder="Primeira nota" name="nota1">
+        <input type="text" placeholder="Segunda nota" name="nota2">
+        <input type="button" value="Enviar" onclick="acao()">
+
+        <h1 id="mensagem"></h1>
+
+    </form>
+</body>
+</html>
